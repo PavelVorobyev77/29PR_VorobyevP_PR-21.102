@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/cameraButton"
+            android:layout_width="70dp"
+            android:layout_height="66dp"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cam"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/googleButton"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/www"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/contactsButton"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/phone"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/mapsButton"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/world"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/otherAppButton"
+            android:layout_width="71dp"
+            android:layout_height="66dp"
+            android:backgroundTint="#FFFFFF"
+            android:scaleType="fitCenter"
+            android:src="@drawable/boom"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+</LinearLayout>
