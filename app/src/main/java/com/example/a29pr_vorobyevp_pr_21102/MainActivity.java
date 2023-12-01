@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageButton mapsButton;
     private ImageButton googleButton;
     private ImageButton contactsButton;
+    private ImageButton phoneButton;
     private ImageButton otherAppButton;
 
     @Override
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         googleButton = findViewById(R.id.googleButton);
         googleButton.setOnClickListener(this);
+
+        phoneButton = findViewById(R.id.phoneButton);
+        phoneButton.setOnClickListener(this);
 
         contactsButton = findViewById(R.id.contactsButton);
         contactsButton.setOnClickListener(this);
@@ -47,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             openGoogle();
         } else if (v.getId() == R.id.contactsButton) {
             openContacts();
+        } else if (v.getId() == R.id.phoneButton) {
+            openPhone();
         } else if (v.getId() == R.id.otherAppButton) {
             openOtherApp();
         }
@@ -58,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void openMaps() {
-        Uri locationUri = Uri.parse("geo:0,0?q=Google+Maps");
+        Uri locationUri = Uri.parse("geo:0,0?q=Новосибирский авиационно-технический колледж имени Б.С.Галущака");
         Intent intent = new Intent(Intent.ACTION_VIEW, locationUri);
         startActivity(intent);
     }
@@ -71,6 +77,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void openContacts() {
         Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+        startActivity(intent);
+    }
+    private void openPhone() {
+        String phoneNumber = "tel:666";
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse(phoneNumber));
         startActivity(intent);
     }
 
